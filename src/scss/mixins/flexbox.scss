@@ -1,0 +1,7 @@
+@mixin flexbox($dis , $direction , $corte , $just , $align){
+    display:$dis;
+    flex-flow: $direction $corte;
+    justify-content: $just;
+    align-items: $align;
+}
+

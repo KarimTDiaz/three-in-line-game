@@ -1,0 +1,17 @@
+$pathMobile: '../assets/images/mobile/';
+$pathTablet: '../assets/images/tablet/';
+$pathDesktop: '../assets/images/desktop/';
+
+
+
+@function mobile($image) {
+  @return url(($pathMobile + $image));
+}
+
+@function tablet($image) {
+  @return url(($pathTablet + $image));
+}
+
+@function desktop($image) {
+  @return url(($pathDesktop + $image));
+}
