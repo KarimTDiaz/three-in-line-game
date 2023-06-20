@@ -3,14 +3,11 @@
 @use '../mixins/pseudo.scss' as *;
 @use '../mixins/hover.scss' as *;
 
-.title {
-  font-size: 5rem;
-  &--small {
-    font-size: 2.5rem;
-  }
-  &--light {
-    margin: 0;
-    padding-top: 0.6rem;
-    color: var(--text-light);
+.score {
+  &__item {
+    width: 180px;
+    height: 250px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
   }
 }

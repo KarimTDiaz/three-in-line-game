@@ -6,13 +6,49 @@
     <!-- PON UN FAVICON!!! -->
     <link rel="icon" type="image/svg+xml" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- CAMBIA EL TITLE!!! -->
-    <title>Vite Template</title>
+    <title>Three in line</title>
   </head>
   <body>
-    <header class="header"></header>
-    <main class="main"></main>
-    <footer class="footer"></footer>
+    <header class="header">
+      <h1 class="title title--big">THREE IN A ROW</h1>
+      <div id="reset" class="reset-button">PLAY AGAIN</div>
+    </header>
+    <main class="main">
+      <div class="score">
+        <h2 class="title title--small">PLAYER 1</h2>
+        <div class="score__item">
+          <h3 class="title title--small title--light">POINTS</h3>
+          <p id="score-first-player" class="text">0</p>
+        </div>
+      </div>
+      <div class="game-board-container winner-line">
+        <div id="game-board" class="game-board">
+          <div class="game-board__item"></div>
+          <div class="game-board__item"></div>
+          <div class="game-board__item"></div>
+          <div class="game-board__item"></div>
+          <div class="game-board__item"></div>
+          <div class="game-board__item"></div>
+          <div class="game-board__item"></div>
+          <div class="game-board__item"></div>
+          <div class="game-board__item"></div>
+        </div>
+      </div>
+      <div class="score">
+        <h2 class="title title--small">PLAYER 2</h2>
+        <div class="score__item">
+          <h3 class="title title--small title--light">POINTS</h3>
+          <p id="score-second-player" class="text">0</p>
+        </div>
+      </div>
+    </main>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>

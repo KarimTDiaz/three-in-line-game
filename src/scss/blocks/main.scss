@@ -1,1 +1,8 @@
-/* ESTILOS DEL MAIN */
+@use '../mixins/flexbox.scss' as *;
+
+.main {
+  @include flexbox(flex, row, nowrap, space-between, start);
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}

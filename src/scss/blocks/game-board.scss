@@ -1,0 +1,29 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/flexbox.scss' as *;
+@use '../mixins/pseudo.scss' as *;
+@use '../mixins/hover.scss' as *;
+
+.game-board-container {
+  position: relative;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+}
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 175px);
+  grid-template-rows: repeat(3, 175px);
+  width: 533px;
+  height: 533px;
+  border: 4px solid var(--primary-color);
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    width: 175px;
+    height: 175px;
+    border: 2px solid var(--primary-color);
+  }
+}
