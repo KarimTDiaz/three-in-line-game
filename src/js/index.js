@@ -6,6 +6,8 @@ const scoreSecondPlayerElement = document.getElementById('score-second-player');
 const gameBoxesElement = document.querySelectorAll('.game-board__item');
 const resetElement = document.getElementById('reset');
 
+let gameOver = false;
+
 const possibleWins = [
   [0, 1, 2],
   [3, 4, 5],
@@ -22,6 +24,7 @@ let counterScoreFirstPlayer = 0;
 let counterScoreSecondPlayer = 0;
 
 let currentPlayer = 1;
+
 const currentGame = {
   firstPlayer: [],
   secondPlayer: []
@@ -35,6 +38,7 @@ const setBoxesData = () => {
 
 const resetGame = () => {
   setBoxesData();
+  gameOver = false;
   counterCurrentGame = 0;
   currentGame.firstPlayer = [];
   currentGame.secondPlayer = [];
@@ -71,6 +75,12 @@ const setWinner = () => {
     const player2Wins = win.every(index =>
       currentGame.secondPlayer.includes(index)
     );
+    if (player1Wins || player2Wins) {
+      gameOver = true;
+      gameBoxesElement.forEach(item => {
+        item.style.pointerEvents = 'none';
+      });
+    }
     if (player1Wins) {
       counterScoreFirstPlayer++;
       scoreFirstPlayerElement.textContent = counterScoreFirstPlayer;
@@ -84,6 +94,7 @@ const setWinner = () => {
 setBoxesData();
 
 gameBoardElement.addEventListener('click', ev => {
+  if (gameOver) return;
   setCurrentGame(ev);
   setWinner();
 });
@@ -91,18 +102,3 @@ gameBoardElement.addEventListener('click', ev => {
 resetElement.addEventListener('click', ev => {
   resetGame();
 });
-
-const name = 'Carlos';
-let counter = 1;
-
-let string = 'hola';
-const otherString = 'hola que tal';
-
-let number = -5;
-const otherNumber = 10;
-
-let isTrue = true;
-const isFalse = false;
-
-let isUndefined = undefined;
-const isNull = null;
