@@ -91,3 +91,18 @@ gameBoardElement.addEventListener('click', ev => {
 resetElement.addEventListener('click', ev => {
   resetGame();
 });
+
+const name = 'Carlos';
+let counter = 1;
+
+let string = 'hola';
+const otherString = 'hola que tal';
+
+let number = -5;
+const otherNumber = 10;
+
+let isTrue = true;
+const isFalse = false;
+
+let isUndefined = undefined;
+const isNull = null;
